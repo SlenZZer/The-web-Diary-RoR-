@@ -1,0 +1,28 @@
+<br>
+<div class="card">
+  <div class="card-header">
+
+      <h5 class="card-title">
+        <strong>First name:</strong>
+        <%= @friend.First_name %>
+       </h5>
+      <p class="card-text">
+        <strong>Last name:</strong>
+        <%= @friend.Last_name %>
+      </p>
+  </div>
+  <div class="card-body">
+
+    <p class="card-text">
+      <strong>Email:</strong>
+      <%= @friend.Email %>
+    </p>
+    <p class="card-text">
+      <strong>Phone no:</strong>
+      <%= @friend.phone_no %>
+     </p>
+
+     <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %> |
+     <%= link_to 'Back', friends_path, class:"btn btn-secondary" %>
+  </div>
+</div>
