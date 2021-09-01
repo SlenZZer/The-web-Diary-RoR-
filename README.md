@@ -5,9 +5,16 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 3.0.2
 
-* System dependencies
+* System dependencies :
+
+    Ruby
+    Rails
+    Yarn
+    sqlite3
+    node js
+
 
 * Configuration
 
