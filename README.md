@@ -19,7 +19,7 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-
+  we are testing fit configs...
 * Database initialization
 
 * How to run the test suite
