@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_01_060950) do
+ActiveRecord::Schema.define(version: 2021_09_13_113318) do
+
+  create_table "diary_entry_records", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "post_time"
+    t.string "datetime"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_diary_entry_records_on_user_id"
+  end
 
   create_table "friends", force: :cascade do |t|
     t.string "First_name"

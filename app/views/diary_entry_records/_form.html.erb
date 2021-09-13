@@ -1,0 +1,47 @@
+
+<div class="card text-center">
+  <div class="card-header">
+<%= form_with(model: diary_entry_record) do |form| %>
+      <% if diary_entry_record.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(diary_entry_record.errors.count, "error") %> prohibited this diary_entry_record from being saved:</h2>
+
+          <ul>
+            <% diary_entry_record.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+  </div>
+  <div class="card-body">
+    <div class="mb-3">
+      <h5 class="card-title"><%= form.label :title  , class: " form-label " %> </h5>
+      <%= form.text_field :title , class: " form-control " %>
+    </div>
+
+    <p class="card-text">
+      <div class="mb-3">
+        <%= form.label :Entry , class: " form-label "%>
+        <%= form.text_area :description ,class: " form-control ", rows:"3"%>
+      </div>
+        <div class="row g-3">
+          <div class="col-auto">
+            <%= form.label :time , class: " form-label "  %>
+            <%= form.text_field :post_time ,class: " form-control " ,placeholder:"hh:mm am/pm"%>
+             <br>
+            <%= form.label :date , class: " form-label "%>
+            <%= form.text_field :datetime ,class: " form-control ", placeholder:"dd/mm/yyyy"%>
+            <%= form.text_field :user_id  ,class: " form-control " ,type: :hidden %>
+          </div>
+        </div>
+    </p>
+    <div class="actions">
+      <%= form.submit class:"btn btn-outline-primary" %>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+     |||
+  </div>
+  </div>
+<% end %>

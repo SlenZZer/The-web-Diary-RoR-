@@ -1,0 +1,28 @@
+
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">
+      <strong>Title</strong>
+        <%= @diary_entry_record.title %>
+    </h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">
+      <strong>Entry:</strong>
+      <%= @diary_entry_record.description %>
+    </p>
+
+    <p class="card-text">
+      <strong>time:</strong>
+      <%= @diary_entry_record.post_time %>
+    </p>
+
+    <p class="card-text">
+      <strong>Date:</strong>
+      <%= @diary_entry_record.datetime %>
+    </p>
+    <%= link_to 'Edit', edit_diary_entry_record_path(@diary_entry_record),class:"btn btn-outline-primary" %> |
+    <%= link_to 'Back', diary_entry_records_path, class:"btn btn-outline-dark" %>
+  </div>
+
+</div>

@@ -18,9 +18,9 @@
         <td><%= friend.Last_name %></td>
         <td><%= friend.Email %></td>
         <td><%= friend.phone_no %></td>
-        <td><%= link_to 'Show', friend %></td>
-        <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
-        <td><%= link_to 'Destroy', friend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', friend, class:"btn btn-outline-secondary" %></td>
+        <td><%= link_to 'Edit', edit_friend_path(friend) ,class:"btn btn-outline-secondary"%></td>
+        <td><%= link_to 'Delete', friend, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger" %></td>
       </tr>
       <%end%>
     <% end %>
@@ -29,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Friend', new_friend_path , class:"btn btn-secondary"%>
+<%= link_to 'New Friend', new_friend_path , class:"btn btn-outline-secondary"%>

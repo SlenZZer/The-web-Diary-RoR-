@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :diary_entry_records
   devise_for :users
   resources :friends
   #get 'home/index'

@@ -1,0 +1,20 @@
+<h1>Your Entries:</h1>
+<% @diary_entry_records.each do |diary_entry_record| %>
+  <% if diary_entry_record.user == current_user %>
+        <div class="card">
+          <div class="card-header">
+            <%= diary_entry_record.post_time %> || <%= diary_entry_record.datetime %>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= diary_entry_record.title %></h5>
+            <p class="card-text"> </p>
+            <%= link_to 'Show', diary_entry_record , class:"btn btn-outline-success" %>
+            <%= link_to 'Edit', edit_diary_entry_record_path(diary_entry_record),class:"btn btn-outline-success" %>
+            <%= link_to 'Delete', diary_entry_record, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-outline-danger"%>
+          </div>
+        </div>
+    <%end%>
+        <br>
+<% end %>
+<br>
+<%= link_to 'New Diary Entry Record', new_diary_entry_record_path , class:"btn btn-outline-primary"%>

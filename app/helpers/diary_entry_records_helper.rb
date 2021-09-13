@@ -1,0 +1,2 @@
+module DiaryEntryRecordsHelper
+end
